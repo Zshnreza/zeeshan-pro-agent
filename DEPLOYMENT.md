@@ -35,6 +35,8 @@ SERPAPI_API_KEY = ""
 
 ## Deploy On Render
 
+This repository includes `render.yaml` for Render Blueprint deploys.
+
 Use these settings:
 
 - Environment: Python

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: zeeshan-pro-agent
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run src/chat_app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: GROQ_BASE_URL
+        value: https://api.groq.com/openai/v1
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
