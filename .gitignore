@@ -1,0 +1,14 @@
+.env
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/profile_redacted.md
+data/profile_private.md
+data/pro_memory.json
+data/approval_queue.json
+data/opportunity_tracker.json
+runs/
+chat_exports/
+*.png
+.streamlit/secrets.toml
