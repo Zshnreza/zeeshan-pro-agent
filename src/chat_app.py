@@ -27,7 +27,7 @@ load_dotenv()
 ROOT = Path(__file__).resolve().parents[1]
 
 
-st.set_page_config(page_title="Zeeshan Pro Agent", page_icon="AI", layout="wide")
+st.set_page_config(page_title="Franzik", page_icon="AI", layout="wide")
 
 st.markdown(
     """
@@ -98,7 +98,7 @@ def extract_uploaded_file(uploaded_file) -> str:
 
 
 def chat_export_text() -> str:
-    lines = ["# Zeeshan Pro Agent Chat", ""]
+    lines = ["# Franzik Chat Export", ""]
     for message in st.session_state.messages:
         lines.append(f"## {message['role'].title()}")
         lines.append(message["content"])
@@ -116,8 +116,8 @@ for secret_name in ["GROQ_API_KEY", "GROQ_BASE_URL", "GROQ_MODEL", "TAVILY_API_K
         pass
 
 with st.sidebar:
-    st.markdown("## Zeeshan Pro")
-    st.caption("Personal autonomous agent workspace")
+    st.markdown("## Franzik")
+    st.caption("Research. Plan. Execute.")
 
     groq_key = st.text_input(
         "Groq API key",
@@ -157,13 +157,13 @@ with st.sidebar:
         st.session_state.last_sources = []
         st.rerun()
 
-    st.download_button("Download chat", chat_export_text(), file_name="zeeshan_pro_chat.md")
+    st.download_button("Download chat", chat_export_text(), file_name="franzik_chat.md")
 
 st.markdown(
     """
     <div class="hero">
-      <div class="hero-title">Zeeshan Pro Agent</div>
-      <div class="hero-sub">A task-running AI workspace with research, memory, trackers, and approval gates.</div>
+      <div class="hero-title">Franzik</div>
+      <div class="hero-sub">Research, plan, analyze, and execute tasks with AI-powered workflows.</div>
     </div>
     """,
     unsafe_allow_html=True,
